@@ -66,6 +66,7 @@ export default class GLTFModel extends MeshObject {
     let boxShape = new AMMO.btBoxShape(new AMMO.btVector3(w, h, d));
     
     this.initPhysics(this.mass, boxShape);
+    this.helper.visible = false;
     this.scene.scene.add(this.helper);
   }
 
